@@ -1,0 +1,72 @@
+.body-img {
+  		background:url(body.jpg); 
+  		opacity: 0.2;
+  		background-repeat: no-repeat;
+      	background-size:  cover;
+        background-attachment: fixed;
+        background-position: center;
+  	}
+header {
+  	  background-image: url(Wallpaper.jpg);
+      background-repeat: no-repeat;
+      background-size:  cover;
+      background-attachment: fixed;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+  	}
+  .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+ .fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+ 
+.show {display:block;}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+span {
+  font-family: arial, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+  border-right:0; 
+  box-shadow:0 0 0; 
+  border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    width: 100%;
+  }
+
+}

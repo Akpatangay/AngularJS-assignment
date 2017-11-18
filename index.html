@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>Soccer Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container-fluid fill">
+            <p class="col-md-4 col-sm-4" style="float: left !important; margin: 0; padding: 0;"><img src="logo.png"></p>
+            <p class="col-md-8 col-sm-8" style=" float: left; text-align: center !important;font-family:fantasy; font-weight: bolder;">
+                <h1 style="color: white; font-size: 500%">Soccer</h1></p>
+            <p> <span style="white-space: pre-line;"></span>
+                <h2 style="color: white;"> English Premier League</h2>
+            </p>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li><a href="#/home">HOME</a></li>
+              <li><a href="#/match2015">MATCHES 2015-2016</a></li>
+              <li><a href="#/match2016">MATCHES 2016-2017</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">TEAM STATISTICS<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">TOTAL MATCHES PLAYED</a></li>
+                <li><a href="#">TOTAL MATCHES WON</a></li>
+                <li><a href="#">TOTAL MATCHES LOST</a></li>
+                <li><a href="#">GOALS SCORED</a></li>
+            </ul>
+             </li>
+            </ul>
+      </div>
+    </nav>
+    <br><br>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <ng-view></ng-view>
+    </div>
+    
+    <!--<script type="text/javascript" src="app.js"></script>//-->
+    <script type="text/javascript" src="controller.js"></script>
+    <script type="text/javascript" src="routes/routes.js"></script>
+</body>
+
+</html>
