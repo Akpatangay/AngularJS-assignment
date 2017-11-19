@@ -39,8 +39,8 @@ app.controller("dataTwoController", ['$http', function($http) {
     this.loadAllResults();
 }]);
 
-app.controller("homeController", function() {
-   main.message = "SOCCER";
+app.controller("homeController", function() { console.log(this);
+   this.message = "SOCCER";
    }
         
 );
