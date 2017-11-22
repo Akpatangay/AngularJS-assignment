@@ -9,7 +9,6 @@ app.controller("dataOneController", ['$http', function($http) {
         }).then(function successCallback(response) { //debugger;
             console.log(response.data);
             main.firstData = response.data; 
-            //console.log(main.blogs);
 
         }, function errorCallback(response) {
             alert("some error occurred. Check the console.");
@@ -29,7 +28,6 @@ app.controller("dataTwoController", ['$http', function($http) {
         }).then(function successCallback(response) { //debugger;
             console.log(response.data);
             main.secondData = response.data;
-            //console.log(main.blogs);
 
         }, function errorCallback(response) {
             alert("some error occurred. Check the console.");
@@ -39,8 +37,10 @@ app.controller("dataTwoController", ['$http', function($http) {
     this.loadAllResults();
 }]);
 
-app.controller("homeController", function() { console.log(this);
-   this.message = "SOCCER";
+app.controller("homeController", function() { 
+    console.log(this);
+  
    }
         
 );
+

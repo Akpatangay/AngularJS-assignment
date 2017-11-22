@@ -1,0 +1,5 @@
+
+
+<select ng-repeat="match.team1.key for match in dataOne.firstData.rounds.matches| unique:'key'">
+	<option value="{{match.team1.name}}">{{match.team1.name}}</option>
+</select>

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <p>
+            <h4><u>2016-2017</u></h4></p>
+        <div class="table-responsive" style="overflow-x:auto;" ng-repeat="round in dataTwo.secondData.rounds">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <span><h5><u style="font-weight: bolder;">{{round.name}}</u></h5></span>
+                        <th>DATE</th>
+                        <th>TEAM 1 (COUNTRY)</th>
+                        <th>SCORES</th>
+                        <th>TEAM 2 (COUNTRY)</th>
+                        <th>VIEW MATCH DETAILS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="match in round.matches | filter:searchText">
+                        <td>{{match.date}}</td>
+                        <td>{{match.team1.name}}</td>
+                        <td>{{match.score1}} - {{match.score2}}</td>
+                        <td>{{match.team2.name}}</td>
+                        <td><a type="button" class="btn btn-default" style="color: black; cursor: pointer;" ng-href="#!/match/{{match.team1.code}}/{{match.team2.code}}/{{match.date}}">CLICK</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br></br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="row">
+
+       <div class="col-sm-12 col-md-12">
+        <h1 style="text-align: center;"><u> {{match.heading}} </u></h1>
+        <hr><br><br>
+        <table class="table table-responsive table-bordered">
+          <thead>
+             <tr>
+                <th>DATE</th>
+                <th>TEAM 1</th>
+                <th>SCORES</th>
+                <th>TEAM 2</th>
+            </tr>    
+          </thead>
+          <tbody>
+            <tr>
+                <td>{{match.date}}</td>
+                <td>{{match.code1}}</td>
+                <td>{{match.score1}} - {{match.score2}}</td>
+                <td>{{match.code2}}</td>
+            </tr>
+            <tr>
+                <td colspan="4"> <span style="text-align: center !important; font-weight: bolder;"> VERDICT : {{match.verdict}} </span></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+      </div>
+  </div>
+</div>
+ 
+ <div class="col-xs-2"> <span id="butn"><a href="#/"> &larr; Go back </a></span> </div>
+            
+    
