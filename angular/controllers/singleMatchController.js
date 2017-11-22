@@ -10,7 +10,7 @@ app.controller('singleMatchController',['$routeParams', '$http', function($route
 	this.verdict ='';
 	this.date = $routeParams.date;
 
-	this.getSingleMatch = function() { debugger;
+	this.getSingleMatch = function() { 
 		function singleMatchData(response) { 
 			main.data = response.rounds;
 
@@ -25,9 +25,9 @@ app.controller('singleMatchController',['$routeParams', '$http', function($route
 						main.date = main.data[i].matches[j].date;
 
 						if(main.score1 > main.score2)
-							main.verdict = main.name1 + 'WON';	
+							main.verdict = main.name1 + ' WON';	
 						else if(main.score1 < main.score2) 
-							main.verdict = main.name2 + 'WON';
+							main.verdict = main.name2 + ' WON';
 						else main.verdict = "IT WAS A TIE";
 					}
 				}

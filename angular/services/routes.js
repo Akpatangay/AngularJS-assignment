@@ -19,10 +19,15 @@ app.config(['$routeProvider', function($routeProvider){
         	controller 		: 'dataTwoController',
         	controllerAs 	: 'dataTwo'
         })
-         .when('/match/:match.team1.code/:match.team2.code/:match.date',{
+         .when('/match/:code1/:code2/:date',{
             templateUrl     : 'views/singleMatch.html',
             controller      : 'singleMatchController',
             controllerAs    : 'match'
+        })
+         .when('/teamStats',{
+            templateUrl     : 'views/teamStats.html',
+            controller      : 'teamStatsController',
+            controllerAs    : 'statsCtrl'
         })
         .otherwise(
             {
