@@ -2,6 +2,7 @@
 
 <div class="container-fluid">
     <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
          <p><h4><u>2015-2016</u></h4></p>
          <div class="table-responsive" style="overflow-x:auto;" ng-repeat="round in dataOne.firstData.rounds">
             <table class="table table-bordered">
@@ -16,7 +17,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="match in round.matches">
+                    <tr ng-repeat="match in round.matches | filter:searchText">
                         <td>{{match.date}}</td>
                         <td>{{match.team1.name}}</td>
                         <td>{{match.score1}} - {{match.score2}}</td>
@@ -28,4 +29,5 @@
             <br></br>
         </div>
     </div>
+</div>
 </div>
