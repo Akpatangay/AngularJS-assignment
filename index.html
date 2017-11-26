@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="myApp"> 
 
+<!--header-->
 <head>
     <title>Soccer Website</title>
     <meta charset="utf-8">
@@ -37,18 +38,8 @@
                         <li><a href="#!/match16">2016-2017</a></li>
                     </ul>
                 </li>
-                <li><a href="#!/teamStats" id = "btn" ng-click="statsCtrl.getStats()">TEAM STATISTICS</a></li>
+                <li><a href="#!/teamStats" id = "btn">TEAM STATISTICS</a></li>
             </ul>
-            <div class="navbar-form navbar-left">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" ng-model="searchText">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
     </nav>
 
@@ -61,12 +52,13 @@
     </div>
 
 
-    <!--<script type="text/javascript" src="app.js"></script>//-->
+    <!--scripts-->
     <script type="text/javascript" src="angular/controllers/mainController.js"></script>
     <script type="text/javascript" src="angular/controllers/singleMatchController.js"></script>
     <script type="text/javascript" src="angular/services/routes.js"></script>
+    <script type="text/javascript" src="angular/services/customFilter.js"></script>
     <script type="text/javascript" src="angular/controllers/teamStatsController.js"></script>
-    <!--<script type="text/javascript" src="unique.js"></script>//-->
+    
 </body>
 
 </html>

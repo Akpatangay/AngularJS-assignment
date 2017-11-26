@@ -1,5 +1,6 @@
 var app = angular.module("myApp", ['ngRoute']);
 
+//controller for the match15 view
 app.controller("dataOneController", ['$http', function($http) {
     var main = this;
     this.loadAllResults = function() {
@@ -19,6 +20,7 @@ app.controller("dataOneController", ['$http', function($http) {
     this.matchView="firstMatch.html";
 }]);
 
+//controller for the match16 view
 app.controller("dataTwoController", ['$http', function($http) {
     var main = this;
     this.loadAllResults = function() {
@@ -37,6 +39,7 @@ app.controller("dataTwoController", ['$http', function($http) {
     this.loadAllResults();
 }]);
 
+//controller for the home view
 app.controller("homeController", function() { 
     console.log(this);
   

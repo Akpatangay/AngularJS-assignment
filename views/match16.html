@@ -1,9 +1,54 @@
-<div class="container-fluid">
+
+<!--search bars-->
+<div class="container">
+    <div class="row">
+        <div class="adj col-xs-12 col-sm-12 col-md-2">
+            <div class="navbar-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search team1 name" ng-model="searchTxt.team1.name">
+                </div>
+            </div>
+        </div>
+        <div class="adj col-xs-12 col-sm-12 col-md-2">
+            <div class="navbar-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search team2 name" ng-model="searchTxt.team2.name">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div class="navbar-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search year" ng-model="searchTxt.date">
+                </div>
+            </div>
+        </div>
+        <div class="adj col-xs-12 col-sm-12 col-md-2">
+            <div class="navbar-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search score of team1" ng-model="searchTxt.score1">
+                </div>
+            </div>
+        </div>
+        <div class="adj col-xs-12 col-sm-12 col-md-2">
+            <div class="navbar-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search score of team2" ng-model="searchTxt.score2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<br/>
+
+<!--table for 2016-2017-->
+<div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <p>
                 <h4><u>2016-2017</u></h4></p>
-            <div class="table-responsive" style="overflow-x:auto;" ng-repeat="round in dataTwo.secondData.rounds | filter:searchText">
+            <div class="table-responsive" style="overflow-x:auto;" ng-repeat="round in dataTwo.secondData.rounds">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -16,7 +61,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="match in round.matches | filter:searchText">
+                        <tr ng-repeat="match in round.matches | filter:searchTxt">
                             <td>{{match.date}}</td>
                             <td>{{match.team1.name}}</td>
                             <td>{{match.score1}} - {{match.score2}}</td>

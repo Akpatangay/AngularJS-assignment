@@ -1,3 +1,4 @@
+//controller for the singleMatch view
 app.controller('singleMatchController',['$routeParams', '$http', function($routeParams, $http){
 	var main = this;
 	this.heading = '';
@@ -32,7 +33,8 @@ app.controller('singleMatchController',['$routeParams', '$http', function($route
 					}
 				}
 			}
-		}
+		}// end of singleMatchData function
+
 
 		main.getSingleMatchesOf2015 = function() {
 			$http({
@@ -44,7 +46,8 @@ app.controller('singleMatchController',['$routeParams', '$http', function($route
 				alert("An error has occured!\n Check the console.");
 				console.log(error); 
 			});
-		}();
+		}();// end of getsingleMatchesOf2015 function
+
 		main.getSingleMatchesOf2016 = function() {
 			$http({
 				method:'GET',
@@ -55,10 +58,12 @@ app.controller('singleMatchController',['$routeParams', '$http', function($route
 				alert("An error has occured!\n Check the console.");
 				console.log(error);
 			});
-		}();
 
-	}();
-}]);
+		}(); // end of getsingleMatchesOf2016 function
+
+	}(); // end of getSingleMatch function
+
+}]); //end of singleMatchController
 
 
 

@@ -5,76 +5,95 @@
         </div>
         <br/>
         <br/>
-    </div>
         <div style="text-align: center;">
             <form>
-                <input style="text-align: center;" type="text" name="teamSearch" placeholder="Enter team name" />
+            	<h4>Search by team </h4>
+                <input style="text-align: center;" type="text" name="teamSearch" placeholder="Enter team name" ng-model='search' />
+                <br/>
+                <br/>
             </form>
-            <br/>
-            <br/>
         </div>
-        <div class="container" style="text-align: center;">
-            <h2><u>TEAM NAME</u></h2>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <span><h4><u style="font-weight: bolder;">YEAR 2015-2016</u></h4></span>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>NUMBER OF MATCHES PLAYED - </td>
-                        </tr>
-                        <tr>
-                            <td>NUMBER OF GOALS SCORED - </td>
-                        </tr>
-                        <tr>
-                            <td>NUMBER OF WINS - </td>
-                        </tr>
-                        <tr>
-                            <td>NUMBER OF LOSSES - </td>
-                        </tr>
-                        <tr>
-                            <td>WIN PERCENTAGE - </td>
-                        </tr>
-                        <tr>
-                            <td>LOSS PERCENTAGE - </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <br/>
+        <br/>
+        <!--stats of all the teams-->
+        <div class="container" ng-repeat="(key, value) in statsCtrl.stats | custom: search">
+            <div class="container" style="text-align: center;">
+                <h2><u>{{key}}</u></h2>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <span><h4><u style="font-weight: bolder;">YEAR 2016-2017</u></h4></span>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>NUMBER OF MATCHES PLAYED - </td>
-                        </tr>
-                        <tr>
-                            <td>NUMBER OF GOALS SCORED - </td>
-                        </tr>
-                        <tr>
-                            <td>NUMBER OF WINS - </td>
-                        </tr>
-                        <tr>
-                            <td>NUMBER OF LOSSES - </td>
-                        </tr>
-                        <tr>
-                            <td>WIN PERCENTAGE - </td>
-                        </tr>
-                        <tr>
-                            <td>LOSS PERCENTAGE - </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!--stats for 2015-2016-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6" ng-if="value[2015]">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <span><h4><u style="font-weight: bolder;">YEAR 2015-2016</u></h4></span>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NUMBER OF MATCHES PLAYED </td>
+                                <td>{{value[2015].matches}}</td>
+                            </tr>
+                            <tr>
+                                <td>NUMBER OF GOALS SCORED </td>
+                                <td>{{value[2015].goals}}</td>
+                            </tr>
+                            <tr>
+                                <td>NUMBER OF WINS </td>
+                                <td>{{value[2015].wins}}</td>
+                            </tr>
+                            <tr>
+                                <td>NUMBER OF LOSSES </td>
+                                <td>{{value[2015].losses}}</td>
+                            </tr>
+                            <tr>
+                                <td>WIN PERCENTAGE </td>
+                                <td>{{value[2015].winPercent}}</td>
+                            </tr>
+                            <tr>
+                                <td>LOSS PERCENTAGE </td>
+                                <td>{{value[2015].lossPercent}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--stats for 2016-2017-->
+                <div class="col-xs-12 col-sm-6 col-md-6" ng-if="value[2016]">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <span><h4><u style="font-weight: bolder;">YEAR 2016-2017</u></h4></span>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NUMBER OF MATCHES PLAYED </td>
+                                <td>{{value[2016].matches}}</td>
+                            </tr>
+                            <tr>
+                                <td>NUMBER OF GOALS SCORED </td>
+                                <td>{{value[2016].goals}}</td>
+                            </tr>
+                            <tr>
+                                <td>NUMBER OF WINS </td>
+                                <td>{{value[2016].wins}}</td>
+                            </tr>
+                            <tr>
+                                <td>NUMBER OF LOSSES </td>
+                                <td>{{value[2016].losses}}</td>
+                            </tr>
+                            <tr>
+                                <td>WIN PERCENTAGE </td>
+                                <td>{{value[2016].winPercent}}</td>
+                            </tr>
+                            <tr>
+                                <td>LOSS PERCENTAGE </td>
+                                <td>{{value[2016].lossPercent}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-
+</div>

@@ -4,30 +4,29 @@
             <h1 style="text-align: center;"> {{match.name1}} Vs {{match.name2}} </h1>
             <br/>
             <br/>
-            <table class="table table-responsive table-bordered">
-                <thead>
-                    <tr>
-                        <th>DATE</th>
-                        <th>TEAM 1</th>
-                        <th>SCORES</th>
-                        <th>TEAM 2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{match.date}}</td>
-                        <td>{{match.name1}}</td>
-                        <td>{{match.score1}} - {{match.score2}}</td>
-                        <td>{{match.name2}}</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><span style="text-align: right !important; font-weight: bolder;">VERDICT : {{match.verdict}}</span></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>TEAM 1</th>
+                            <th>SCORES</th>
+                            <th>TEAM 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{match.date}}</td>
+                            <td>{{match.name1}}</td>
+                            <td>{{match.score1}} - {{match.score2}}</td>
+                            <td>{{match.name2}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <br/>
+                <span style="font-weight: bolder !important;"><h3>VERDICT : {{match.verdict}}</h3></span>
+            </div>
         </div>
     </div>
 </div>
