@@ -1,52 +1,54 @@
-
 <!--search bars -->
 <div class="container">
     <div class="row">
         <div class="adj col-xs-12 col-sm-12 col-md-2">
             <div class="navbar-form">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search team1 name" ng-model="searchTxt.team1.name">
+                    <input type="text" class="form-control" placeholder="Search team1 name" ng-model="searchTxt.team1.name"></input>
                 </div>
             </div>
         </div>
         <div class="adj col-xs-12 col-sm-12 col-md-2">
             <div class="navbar-form">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search team2 name" ng-model="searchTxt.team2.name">
+                    <input type="text" class="form-control" placeholder="Search team2 name" ng-model="searchTxt.team2.name"></input>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-2">
             <div class="navbar-form">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search year" ng-model="searchTxt.date">
+                    <input type="text" class="form-control" placeholder="Search year" ng-model="searchTxt.date"></input>
                 </div>
             </div>
         </div>
         <div class="adj col-xs-12 col-sm-12 col-md-2">
             <div class="navbar-form">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search score of team1" ng-model="searchTxt.score1">
+                    <input type="text" class="form-control" placeholder="Search score of team1" ng-model="searchTxt.score1"></input>
                 </div>
             </div>
         </div>
         <div class="adj col-xs-12 col-sm-12 col-md-2">
             <div class="navbar-form">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search score of team2" ng-model="searchTxt.score2">
+                    <input type="text" class="form-control" placeholder="Search score of team2" ng-model="searchTxt.score2"></input>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<hr/>
+<hr>
 <br/>
-
 <!--table for 2015-2016-->
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <p><h4><u>2015-2016</u></h4></p>
+            <p>
+                <h4>
+            <u>2015-2016</u>
+        </h4>
+            </p>
             <div class="table-responsive" style="overflow-x:auto;" ng-repeat="round in dataOne.firstData.rounds">
                 <table class="table table-bordered">
                     <thead>
